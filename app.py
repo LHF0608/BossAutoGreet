@@ -2803,8 +2803,8 @@ def run_automation_worker(cfg: dict, account_id: str = "account_1"):
 
             kw_enc = urllib.parse.quote(kw)
             # 搜岗排序策略：综合推荐优先 (默认) vs 最新发布优先 (&sortType=2)
-            cur_sort_mode = current_cfg.get("search_sort_mode", "recommend")
-            if current_cfg.get("search_sort_alternate", True) and cycle_round % 2 == 0:
+            cur_sort_mode = cfg.get("search_sort_mode", "recommend")
+            if cfg.get("search_sort_alternate", True) and cycle_round % 2 == 0:
                 cur_sort_mode = "latest" if cur_sort_mode == "recommend" else "recommend"
             sort_param = "&sortType=2" if cur_sort_mode == "latest" else ""
             search_url = f"https://www.zhipin.com/web/geek/jobs?query={kw_enc}&city={search_city_code}{exp_param}{sort_param}"
@@ -3028,7 +3028,7 @@ def run_automation_worker(cfg: dict, account_id: str = "account_1"):
 # ============================
 # 模块二：指定日期未读消息自动追问（二次跟进）工作线程
 # ============================
-def run_followup_worker(cfg: dict):
+def run_followup_worker(cfg: dict, account_id: str = "account_1"):
     """
     模块二：历史未读消息按指定日期自动追问（二次跟进）工作线程
     1. 打开消息列表页: https://www.zhipin.com/web/geek/chat

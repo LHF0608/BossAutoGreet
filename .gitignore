@@ -19,9 +19,15 @@ data/*.txt
 
 # 3. 本地 SQLite 数据库 (包含个人简历结构化解析全文与个人信息)
 *.db
+*.db-shm
+*.db-wal
+*.sqlite3
 *.sqlite
 *.sqlite3
 data/*.db
+*.db-shm
+*.db-wal
+*.sqlite3
 data/*.sqlite*
 
 # 4. 真实打招呼历史记录与投递日志 (包含个人联系过的真实公司列表)
