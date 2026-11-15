@@ -1,0 +1,62 @@
+# ==============================================================================
+# Git 忽略配置规则 (开源脱敏与安全防护)
+# ==============================================================================
+
+# 1. 浏览器真实会话与登录凭证目录 (绝密！严禁上传，保护个人 Cookie 与微信登录态)
+boss_browser_data/
+browser_data/
+data/accounts/
+*.lock
+Singleton*
+
+# 2. 个人真实简历与私有文档原件 (严格脱敏)
+data/*.pdf
+data/*.docx
+data/*.doc
+data/*.txt
+!data/sample_*.md
+!data/sample_*.pdf
+
+# 3. 本地 SQLite 数据库 (包含个人简历结构化解析全文与个人信息)
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+data/*.sqlite*
+
+# 4. 真实打招呼历史记录与投递日志 (包含个人联系过的真实公司列表)
+history.csv
+history.csv.*
+history.csv*
+history*.csv
+!history.example.csv
+*_bak_*
+*.log
+today_run.log
+supervisor_*.log
+
+# 5. 个人私有密钥与正式配置文件
+.env
+.env.local
+config.json
+
+# 6. Python 编译缓存与虚拟环境
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+python_env/
+
+# 7. 操作系统与 IDE 配置
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.bak_*
+新建 文本文档.txt
+*.tar.gz
+*.zip

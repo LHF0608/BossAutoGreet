@@ -1,0 +1,56 @@
+{
+  "city_filter_mode": "blacklist",
+  "city_whitelist": [
+    "杭州",
+    "上海",
+    "北京",
+    "深圳",
+    "广州",
+    "武汉",
+    "成都",
+    "南京"
+  ],
+  "city_blacklist": [
+    "北京"
+  ],
+  "province_name": "常用热门",
+  "city_name": "全国",
+  "city_code": "100010000",
+  "experience_codes": [
+    "108",
+    "103",
+    "104",
+    "101"
+  ],
+  "keywords": "AI Agent, 大模型应用开发, RAG, LangChain, Python, 大模型开发, 后端开发",
+  "max_consecutive_unsuitable": 100,
+  "title_blacklist": "AI漫剧, 二次创意, 分镜, 剪辑, 包就业, 学徒, 实训, 小说, 影视传媒, 推文, 数据标注, 数据清洗, 文化传媒, 标注, 漫剧, 真人短剧, 短剧, 硕士, 讲师, 课程顾问, 运营, 销售, 零基础, AIGC",
+  "title_whitelist": "",
+  "salary_min": 3.0,
+  "salary_max": 8.0,
+  "hr_active_filters": [
+    "在线",
+    "刚刚活跃",
+    "今日活跃"
+  ],
+  "daily_max_chats": 100,
+  "today_reset_timestamp": "",
+  "followup_target_date": "2026-11-11",
+  "followup_message": "您好，看您比较忙还没来得及看消息，我对贵司该岗位非常感兴趣，有实际落地项目经验，期待与您进一步交流！",
+  "enable_cross_account_collision": false,
+  "enable_company_limit_once": false,
+  "search_sort_mode": "recommend",
+  "search_sort_alternate": true,
+  "speed_mode": "balanced",
+  "greet_interval_min": 6.0,
+  "greet_interval_max": 10.0,
+  "card_inspect_delay_min": 0.15,
+  "card_inspect_delay_max": 0.35,
+  "rest_every_n_chats": 8,
+  "rest_duration_seconds": 30.0,
+  "kw_switch_delay_min": 3.0,
+  "kw_switch_delay_max": 6.0,
+  "all_kw_round_rest_seconds": 45.0,
+  "deepseek_api_key": "",
+  "deepseek_model": "deepseek-chat"
+}
